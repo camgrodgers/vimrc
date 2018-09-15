@@ -2,6 +2,12 @@ if has('syntax') && !exists('g:syntax_on')
 	syntax enable
 endif
 
+if has("autocmd")
+    filetype on
+    filetype indent on
+    filetype plugin on
+endif
+
 set nocompatible
 
 set sessionoptions-=options
@@ -58,5 +64,8 @@ set autoread
 call plug#begin('~/.vim/plugged')
 Plug 'danilo-augusto/vim-afterglow', {'as': 'afterglow'}
 Plug 'morhetz/gruvbox', {'as': 'gruvbox'}
+Plug 'w0rp/ale', {'as': 'ale'}
+Plug 'scrooloose/nerdtree', {'as': 'nerdtree'}
+Plug 'mattn/emmet-vim', {'as': 'emmet'}
 
 call plug#end()
