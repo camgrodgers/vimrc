@@ -6,7 +6,9 @@ if has("autocmd")
     filetype on
     filetype indent on
     filetype plugin on
+	autocmd Filetype elm setlocal expandtab 
 endif
+
 
 set nocompatible
 
@@ -14,7 +16,7 @@ set sessionoptions-=options
 
 set viminfo+=!
 
-set complete=.,w,b,u,t
+set complete=.,w,b,u,t,i
 set completeopt=longest,menuone
 
 set ttyfast
@@ -40,6 +42,8 @@ color desert
 set hlsearch
 set incsearch
 set tags=./tags;,tags
+set path=,,
+set path+=**
 
 set history=1000
 set undolevels=1000
@@ -53,12 +57,14 @@ set smarttab
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
-set expandtab
+set noexpandtab
 
 set backspace=indent,eol,start
 set scrolloff=3
 
 set autoread 
+
+set mouse=a
 
 
 call plug#begin('~/.vim/plugged')
@@ -67,5 +73,7 @@ Plug 'morhetz/gruvbox', {'as': 'gruvbox'}
 Plug 'w0rp/ale', {'as': 'ale'}
 Plug 'scrooloose/nerdtree', {'as': 'nerdtree'}
 Plug 'mattn/emmet-vim', {'as': 'emmet'}
+Plug 'simnalamburt/vim-mundo', {'as': 'mundo'}
+Plug 'ycm-core/YouCompleteMe', {'as': 'youcompleteme'}
 
 call plug#end()
