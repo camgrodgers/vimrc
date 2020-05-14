@@ -66,6 +66,9 @@ set autoread
 
 set mouse=a
 
+map <C-n> :NERDTreeToggle<CR>
+map <C-m> :MundoToggle<CR>
+
 
 call plug#begin('~/.vim/plugged')
 Plug 'danilo-augusto/vim-afterglow', {'as': 'afterglow'}
