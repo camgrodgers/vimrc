@@ -21,6 +21,7 @@ set completeopt=longest,menuone
 
 set ttyfast
 
+
 set number
 set ruler
 set nowrap
@@ -35,8 +36,7 @@ set showcmd
 set relativenumber
 
 set termguicolors
-color desert
-"color gruvbox
+"color desert
 "set background=dark
 
 set hlsearch
@@ -69,14 +69,23 @@ set mouse=a
 map <C-n> :NERDTreeToggle<CR>
 map <C-m> :MundoToggle<CR>
 
+let g:ale_linters = {'rust': ['analyzer']}
+
 
 call plug#begin('~/.vim/plugged')
-Plug 'danilo-augusto/vim-afterglow', {'as': 'afterglow'}
-Plug 'morhetz/gruvbox', {'as': 'gruvbox'}
 Plug 'w0rp/ale', {'as': 'ale'}
 Plug 'scrooloose/nerdtree', {'as': 'nerdtree'}
 Plug 'mattn/emmet-vim', {'as': 'emmet'}
 Plug 'simnalamburt/vim-mundo', {'as': 'mundo'}
-Plug 'ycm-core/YouCompleteMe', {'as': 'youcompleteme'}
-
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'yggdroot/indentline', {'as': 'indentline'}
+Plug 'tpope/vim-surround', {'as': 'surround'}
+Plug 'morhetz/gruvbox', {'as': 'gruvbox'}
+Plug 'NLKNguyen/papercolor-theme', {'as': 'papercolor'}
+Plug 'sjl/badwolf', {'as': 'badwolf'}
+Plug 'junegunn/fzf', {'as': 'fzf'}
 call plug#end()
+
+
+color badwolf
+
